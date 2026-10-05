@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@theme { --color-ink:#050505; --color-lime:#ccff00; --color-mute:#9ca3af; --font-sans:'Inter',system-ui,sans-serif; --font-serif:'Instrument Serif',Georgia,serif; }
+html{scroll-behavior:smooth;background:#050505}
+body{background:#050505;color:#fff;font-family:var(--font-sans);overflow-x:hidden}
+:focus-visible{outline:2px solid #ccff00;outline-offset:3px}
+.metal{background:linear-gradient(180deg,#fff 20%,#6b7280 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 12px 30px rgba(0,0,0,.6))}
+.h-big{font-weight:900;letter-spacing:-.05em;line-height:.9;text-transform:uppercase}
+.serif{font-family:var(--font-serif);font-style:italic;font-weight:400;letter-spacing:-.02em;text-transform:none}
+@keyframes mq{to{transform:translateX(-50%)}}
+.mq{display:flex;width:max-content;animation:mq var(--d,40s) linear infinite}
+.mq.rev{animation-direction:reverse}
+@media (prefers-reduced-motion:reduce){.mq{animation:none}html{scroll-behavior:auto}}
